@@ -61,7 +61,7 @@
 # fact = 1
 # for i in range(1,(n+1)):
 #     fact *= i
-# print(f"the factorial of ypur no. is {fact}"
+# print(f"the factorial of ypur no. is {fact}")
 
 """Q.5 user want to know the the factors of their no """
 # n = int(input("tell mw which no. factor you want : "))
@@ -93,9 +93,9 @@
 #     if n % i == 0:
 #         sum += 1
 # if sum == 2:
-#     print(f"yor no. (n) is a prime no.")
+#     print(f"yor no. {n} is a prime no.")
 # else:
-#     print(f"yor no. (n) is not a prime no.")
+#     print(f"yor no. {n} is not a prime no.")
 
 """ Q.9 check user string is pallindrome or not """
 # n = input("tell me your str : ")
@@ -114,22 +114,36 @@
 # else:
 #     print("your str is not pallindromic")
     
-""" Q.10 user want to seprate digit of their number"""
+""" Q.9 user want to seprate digit of their number"""
 # n = int(input("tell me your no "))
 # while n > 0:
 #     print(n % 10)
 #     n //= 10
 
-""" Q.9 check user number is pallindrome or not """
-n = int(input("tell me your no "))
-rev = 0
-copy = n
-while n > 0:
-    rev = (rev * 10) + (n % 10)
-    n //= 10      # here we print reverse of our number
-if rev == copy:
-    print("your no. is pallindromic")
-else:
-    print("your no. is not pallindromic")
+""" Q.10 check user number is pallindrome or not """
+# n = int(input("tell me your no "))
+# rev = 0
+# copy = n
+# while n > 0:
+#     rev = (rev * 10) + (n % 10)
+#     n //= 10      # here we print reverse of our number
+# if rev == copy:
+#     print("your no. is pallindromic")
+# else:
+#     print("your no. is not pallindromic")
+
+"""" Q.11 count all leters, digits and special char in user string"""
+a = input("tell me your str : ")
+letter = 0
+digit = 0
+spchr = 0
+for i in a:
+    if i.isdigit():
+        digit += 1
+    elif i.isalpha():
+        letter += 1
+    else:
+        spchr += 1
+print(f"your string has :-\n{letter} letters\n{digit} digits\n{spchr} special character")
 
 
