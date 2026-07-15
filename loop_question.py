@@ -103,11 +103,15 @@
 
 """ Q.8 user want to know which consonents and how many times comes in his stings"""
 str = input("enter your words :- ").lower()
-count = 0
 vowel = "aeiou"
 index = 0
+count = {}
 while index < len(str):
-    if str[index] not in vowel and word[index].isalpha:
-        count += 1
-        index += 1
-print(f"{count}, {index}")
+    char = str[index]
+    if char not in vowel and char.isalpha():
+        if char in count:
+            count[char] += 1
+        else:
+            count[char] = 1
+    index += 1
+print(count)
