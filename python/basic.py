@@ -46,5 +46,42 @@ ide = (integrated virtual environment) - vscode,pycharm,jupyter
 # print(f"good morning {name},your are {age} years old")
 
 """logical operator, in and both true - true, in or both false - false"""
-print(4==(8/2) and 8 > 5 and 1.1==1)
-print(5!=5 or 6.0>6 or (2**2)==4)
+# print(4==(8/2) and 8 > 5 and 1.1==1)
+# print(5!=5 or 6.0>6 or (2**2)==4)
+
+""" loop"""
+# for i in range(1,21,1):      # for loop work in a range
+#     print(i, end= ",")
+
+a = 1
+while a <= 20:
+    print(a, end= " ")
+    a += 1
+
+
+
+"""in sting for loops"""
+# a = "heyamram"
+# by index 
+# print(a[7])
+# print(a[::])      [start:end:steps]
+
+# direct by for loops
+a = "ram is a programmer"
+# for i in a:
+#     print(i, end= "")
+
+# for i in range(len(a)):
+#     print(a[i], end= "")
+
+""" Break and continue """
+# for i in range(1,21):
+#     if i == 15:
+#         break
+#     else:
+#         print(i, end= " ")        # if i = 15 then loop break, print till 14
+
+# for i in range(1,21):
+#     if i == 15:
+#         continue
+#     print(i, end=" ")            # here i = 15 ko skip kar ke loop continue rakhega
