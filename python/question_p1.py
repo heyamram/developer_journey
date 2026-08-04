@@ -130,9 +130,6 @@
 #     n //= 10
 
 
-
-
-
 """ Q.10 check user number is pallindrome or not """
 # n = int(input("tell me your no "))
 # rev = 0
@@ -168,13 +165,13 @@
 #     print(num, end=" ")
 #     num += 1
 
-""" Q.2 print cube of nuber form 1 to 10"""
+""" Q.13 print cube of nuber form 1 to 10"""
 # num = 1
 # while num <= 10:
 #     print(num ** 3, end=",")
 #     num += 1
 
-""" Q.3 print odd and even no. from 1 to 10"""
+""" Q.14 print odd and even no. from 1 to 10"""
 # num = 1
 # print("even numbers are :- " )
 # while num <= 10:
@@ -201,7 +198,7 @@
 # print(f"even numbers are :- {even}")
 # print(f"even numbers are :- {even}")
 
-""" Q.4 user want to know factorial"""
+""" Q.15 user want to know factorial"""
 # num = int(input("tell me your number :- "))
 # n = 1
 # fact = 1
@@ -210,7 +207,7 @@
 #     n += 1
 # print(f"the factorial of {num} is {fact}")
 
-""" Q.5 user want to reverse his word"""
+""" Q.16 user want to reverse his word"""
 """m1"""
 # word = input("enter the word you want to reverse :- ")
 # for i in range((len(word)-1),-1,-1):
@@ -220,7 +217,7 @@
 # print(word[::-1])
 
 
-""" Q.6 reverse each word in sentence given by user"""
+""" Q.17 reverse each word in sentence given by user"""
 
 # sent = input("enter the sentence :- ")
 # words = sent.split()
@@ -251,7 +248,7 @@
 # print(result)
 
 
-""" Q.7 user wants to count vowerls and consonents in word, with index"""
+""" Q.18 user wants to count vowerls and consonents in word, with index"""
 # word = input("enter the word: ").lower()
 # vowels = 0
 # consonents = 0
@@ -263,7 +260,7 @@
 #             consonents += 1
 # print(f"vowels : {vowels} \nconsonents : {consonents}")
 
-""" Q.8 user want to know which consonents and how many times comes in his stings"""
+""" Q.19 user want to know which consonents and how many times comes in his stings"""
 # str = input("enter your words :- ").lower()
 # vowel = "aeiou"
 # index = 0
@@ -278,6 +275,28 @@
 #     index += 1
 # print(count)
 
-""" Q.9 check given number is perfect or not"""
-num = int(input("tell your number :-"))
+""" Q.20 check given number is perfect or not"""
+# num = int(input("tell your number :-"))
+# fact = 0
+# for i in range(1,num):
+#    if num % i == 0:
+#       fact += i
+# if fact == num:
+#     print(f"{num} is a perfect number")
+# else:
+#     print(f"{num} is not a perfect number")
+
+""" Q.21 user want to check his number is prime or not"""
+# num = int(input("tell your number : "))
+# fact = 0
+# for i in range(1,(num+1)):
+#     if num % i == 0:
+#         fact += 1
+# if fact == 2:
+#     print("your number is prime number")
+# else:
+#     print("your number is not prime number")
+
+""" Q.22 """
+
 

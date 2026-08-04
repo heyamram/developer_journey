@@ -165,7 +165,7 @@ ________________________________________________________________________
 
 """ Dictionary """  
 
-d = {1:"ram", 2:29, 3:5.2}
+# d = {1:"ram", 2:29, 3:5.2}
 # print(d[2])                 # we can access value through key like we use index in list
 
 # d[1] = "nishu"              
@@ -188,9 +188,133 @@ d = {1:"ram", 2:29, 3:5.2}
 
 # f = d
 # f[1] = "dhruv"
-# print(d)                # deep copy
+# print(d)                # reference assignment, updae occur in both d & f
 
-f = d.copy()
-f[1] = "dhruv"
-print(d)
-print(f)
+# f = d.copy()
+# f[1] = "dhruv"
+# print(d)                # shallow copy, only updae in f not in d
+# print(f)
+
+""" Exception handling """
+# syntax and indentation error we can't handle
+
+# a = int(input("tell your number :- "))
+# print(10/a)                             # if a=0 then raise zero division error
+# print("my task end")                    # and this will not excuted and progamme stopped here
+
+""" try and except are most commonly used """
+# try:
+#     print(10/a)
+# except ZeroDivisionError:                         # if we know errror
+#     print("sorry you cannot divide by zero")
+
+# except Exception as err:                          # if we don't know whivh error about to come
+#     print(f"sorry there is an error as {err}")
+
+""" try except else finally """
+# try:
+#     print(10/a)
+# except Exception as err:                          # if we don't know whivh error about to come
+#     print(f"sorry there is an error as {err}")
+# else:
+#     print("good no error found")
+# finally:
+#     print("i will continue running code no matter what")
+
+""" raise -> we raise error not python programme """
+
+# age = int(input("tell your age :- "))
+# try:
+#     if age < 10 or age > 18:
+#         raise ValueError("your age must be between 10 and 18")
+#     else:
+#         print("welcome to the club")
+# except Exception as err:
+#     print(f"an error arises as {err}")
+
+# print("your code will continue running")
+
+""" File Handling -> CRUD in files , also check the project """
+# p = open('python/basic.py')
+# print(p.read())
+
+# file = open("dhruv.txt","w")       # create or overwrite
+# file.write("hello i am dhruv and i am a class 1 student. ")
+# file.close()
+
+# file = open("dhruv.txt","a")       # apppend
+# file.write("i live in khemnichak patna.")
+# file.close()
+
+# file = open("dhruv.txt","r")       # read by default, we can also add "r"
+# print(file.read())             # read all content
+# file.close()
+
+""" OOPS (OBJECT ORIENTED PROGRAMMING SYSTEM)"""
+# # imperative approach
+# a = 4
+# b = 5
+# print(a+b)
+
+# # functional approach
+# def add(a,b):
+#     print(a+b)
+# add(4,5)
+
+# oops approach
+""" classes in oops -> has two things - attribute(variable) and method(function) """
+# class Factory:
+#     a = 2                   # attribute (just like variable)
+#     def greet(self):        # method (just like function)
+#         print("welcome to the Factory")
+
+# print(Factory().a)
+# Factory().greet()
+
+# obj = Factory()
+# obj2 = Factory()
+
+""" example """
+# class Factory:
+#     def __init__(self,material,zips,pockets):    # self targets object location
+#         self.material = material                 # reebok.material = leather
+#         self.zips = zips                         # reebok.zips = 2
+#         self.pockets = pockets
+    
+#     def show(self):
+#         print(f"your object details are {self.material}, {self.zips}, {self.pockets}")
+
+# reebok = Factory("leather",2,3)
+# campus = Factory("nylon",3,3)
+# skybags = Factory("fabric",2,2)
+
+# print(campus.pockets)
+# print(reebok.material)
+
+# reebok.show()                   # this calls show fun
+# campus.show()
+# skybags.show()
+
+""" methods in oops """
+# class Animalia:
+#     name = "lion"                                #class attribute
+        
+#     def __init__(self,age,location):
+#         self.age = age 
+#         self.location = location                 #instance attribute
+        
+#     def show(self):                              # instance method target object
+#         print(f"lion age is {self.age} and he lived in {self.location}.")
+        
+#     @classmethod
+#     def hello(cls):                              # here cls target class animal not object
+#         print("your class is animalia")
+
+#     @staticmethod
+#     def static():
+#         print("how are you lion")    
+
+# obj = Animalia(12, "zoo")
+# obj.show()
+# obj.hello()
+# obj.static()
